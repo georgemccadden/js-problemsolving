@@ -21,6 +21,7 @@
 function areTheyAnagrams(string1, string2) {
     let letterBank = {};
 
+    // Check to see if the string lengths differ
     if (string1.length !== string2.length) {
         return false;
     }
@@ -36,8 +37,15 @@ function areTheyAnagrams(string1, string2) {
 
     // Checking the letter count of each letter in 'string2'
     for (let letter of string2) {
-
+        if (letterBank[letter] === undefined) {
+            return false;
+        }
+        if (letterBank[letter] < 1) {
+            return false;
+        }
+        letterBank[letter]--;
     }
+    return true;
 
 
 }
