@@ -26,7 +26,18 @@ function areTheyAnagrams(string1, string2) {
     }
 
     // Create the hashmap for the first string
+    for (let letter of string1) {
+        if (letterBank[letter] === undefined) {
+            letterBank[letter] = 1;
+        } else {
+            letterBank[letter]++;
+        }
+    }
 
+    // Checking the letter count of each letter in 'string2'
+    for (let letter of string2) {
+
+    }
 
 
 }
