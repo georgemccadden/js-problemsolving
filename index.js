@@ -49,3 +49,9 @@ function areTheyAnagrams(string1, string2) {
     // If the code runs without returning false, you have an anagram
     return true;
 }
+
+
+// Runtime & Space Complexity :
+
+// O(n) for time
+// O(1) for space
