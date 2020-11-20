@@ -45,7 +45,7 @@ function areTheyAnagrams(string1, string2) {
         }
         letterBank[letter]--;
     }
+
+    // If the code runs without returning false, you have an anagram
     return true;
-
-
 }
