@@ -27,6 +27,8 @@ function validPalindrome(string) {
     let pointerTwo = string.length - 1;
 
     while (pointerOne < pointerTwo) {
-        
+        while (!isValidCharacter(s.charAt(pointerOne))) {
+            pointerOne++;
+        }
     }
 }
