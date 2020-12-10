@@ -6,3 +6,15 @@
 // - There are eight positions in this queue and as riders and their positions increment by one from one at the front of the line
 
 // Example :
+
+// Input ->
+
+// 2
+// 5
+// 2 1 5 3 4
+// 5
+// 2 5 1 3 4
+
+// Output ->
+
+//
