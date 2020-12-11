@@ -29,3 +29,9 @@
 // Too chaotic
 
 // ** BRUTE FORCE ALROGITHM :
+
+// - Create a function which accepts 3 parameters (number of test cases, the number of riders in queue, the final state of the queue)
+// - Loop through the final queue and look to see if the positions match with original position beginning with the one
+// - Create a hashmap to keep track of each riders' count from the original queue position
+// - If it doesn't, increase count in hashmap until you reach the riders' position. If it does match, continue to the next rider.
+// - After you've reached the end of the queue, check to see if any of the riders' has a count of more than 2. If so, return `Too chaotic` and if not, return the sum of all of the counts
