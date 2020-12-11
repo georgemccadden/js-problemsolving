@@ -12,10 +12,18 @@
 // 2
 // 5
 // 2 1 5 3 4
+
+// Output ->
+
+// 3
+
+// Example 2 :
+
+// Input ->
+
 // 5
 // 2 5 1 3 4
 
 // Output ->
 
-// 3
 // Too chaotic
