@@ -35,3 +35,10 @@
 // - Create a hashmap to keep track of each riders' count from the original queue position
 // - If it doesn't, increase count in hashmap until you reach the riders' position. If it does match, continue to the next rider.
 // - After you've reached the end of the queue, check to see if any of the riders' has a count of more than 2. If so, return `Too chaotic` and if not, return the sum of all of the counts
+
+// ** BRUTE FORCE BIG O :
+
+// Runtime complextity -> O(N^2)
+// Space complexity -> O(1)
+
+// ** CODE :
