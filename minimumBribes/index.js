@@ -42,3 +42,9 @@
 // Space complexity -> O(1)
 
 // ** CODE :
+
+function minimumBribes(testCases, numOfRiders, finalQueue) {
+	if (numOfRiders !== finalQueue.length) {
+		return console.error(`Number of riders and the current queue do not match!`);
+	}
+}
