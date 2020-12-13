@@ -64,7 +64,12 @@ function minimumBribes(testCases, numOfRiders, finalQueue) {
 
 // ** Optimal Solution
 
-function optimalMinimumBribes(q) {
+function optimalMinimumBribes(queue) {
 	const tooChaotic = `Too Chaotic`;
-	let total = 0;
+	let numOfBribes = 0;
+
+	// Getting the original position using zero indexing (starts from zero) -> O(n)
+	for (let currPosition = 0; currPosition < queue.length; currPosition++) {
+		const origPosition = queue[currPosition] - 1;
+	}
 }
