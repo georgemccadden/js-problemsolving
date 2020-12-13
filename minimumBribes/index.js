@@ -61,3 +61,5 @@ function minimumBribes(testCases, numOfRiders, finalQueue) {
 		}
 	}
 }
+
+// ** Optimal Solution
