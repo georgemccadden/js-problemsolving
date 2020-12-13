@@ -71,5 +71,11 @@ function optimalMinimumBribes(queue) {
 	// Getting the original position using zero indexing (starts from zero) -> O(n)
 	for (let currPosition = 0; currPosition < queue.length; currPosition++) {
 		const origPosition = queue[currPosition] - 1;
+
+		// Determine how far the rider moved
+		const diff = origPosition - currPosition;
+
+		// If a rider has moved more than twice then it's too chaotic.
+		if (diff < 2) return console.log(tooChaotic);
 	}
 }
