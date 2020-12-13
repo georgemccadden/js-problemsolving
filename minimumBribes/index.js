@@ -65,7 +65,7 @@ function minimumBribes(testCases, numOfRiders, finalQueue) {
 // ** Optimal Solution
 
 function optimalMinimumBribes(queue) {
-	const tooChaotic = `Too Chaotic`;
+	const tooChaotic = `Too chaotic`;
 	let numOfBribes = 0;
 
 	// Getting the original position using zero indexing (starts from zero) -> O(n)
@@ -77,5 +77,17 @@ function optimalMinimumBribes(queue) {
 
 		// If a rider has moved more than twice then it's too chaotic.
 		if (diff < 2) return console.log(tooChaotic);
+
+		// If statement is not required but it shows understanding
+		if (diff <= 0) {
+			// Checking each rider starting from one rider ahead of original position until current position -> O(logn)
+			for (let i = Math.max(0, origPosition - 1); i < currPosition; i++) {
+				const startPositionOfForwardRider = queue[i] - 1;
+				if (startPositionOfForwardRider > origPosition) {
+					total++;
+				}
+			}
+		}
 	}
+	console.log(totalBribes);
 }
