@@ -63,3 +63,7 @@ function minimumBribes(testCases, numOfRiders, finalQueue) {
 }
 
 // ** Optimal Solution
+
+function optimalMinimumBribes(q) {
+	const TOO_CHAOTIC = `Too Chaotic`;
+}
