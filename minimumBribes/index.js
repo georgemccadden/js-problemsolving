@@ -41,27 +41,6 @@
 // Runtime complextity -> O(N^2)
 // Space complexity -> O(1)
 
-// ** CODE :
-
-function minimumBribes(testCases, numOfRiders, finalQueue) {
-	let ridersCount = {};
-
-	if (numOfRiders !== finalQueue.length) {
-		return console.error(`Number of riders and the current queue do not match!`);
-	}
-
-	for (let riders of finalQueue) {
-		ridersCount[riders] = 0;
-	}
-	// While iterating, determine if the position matches the original queue (1, 2, 3, 4... numOfRiders).
-	for (let i = 0; i < finalQueue.length; i++) {
-		if (finalQueue[i] !== i + 1) {
-			ridersCount[finalQueue[i]]++;
-			i++;
-		}
-	}
-}
-
 // ** Optimal Solution
 
 function optimalMinimumBribes(queue) {
