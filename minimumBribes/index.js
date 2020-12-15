@@ -41,7 +41,7 @@
 // Runtime complextity -> O(N^2)
 // Space complexity -> O(1)
 
-// ** Optimal Solution
+// ** OPTIMAL SOLUTION :
 
 function optimalMinimumBribes(queue) {
 	const tooChaotic = `Too chaotic`;
