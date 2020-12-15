@@ -28,3 +28,8 @@ const climbStairs = (n) => {
 	}
 	return dp[1];
 };
+
+// ** BIG O :
+
+// Runtime complexity -> O(n)
+// Space complexity -> O(1)
