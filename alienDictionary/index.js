@@ -34,6 +34,11 @@ const isAlienSorted = (words, order) => {
 		hashMap.set(order[i], i);
 	}
 
+	// Creating a method that compares each letter of the words
+	const compareChars = (a, b) => {
+		hashMap.get(a) - hashMap.get(b);
+	};
+
 	// Creating a method that compares the words in the first parameters
 	const compareWords = (firstWord, secondWord) => {
 		let i = 0;
@@ -41,11 +46,14 @@ const isAlienSorted = (words, order) => {
 
 		// I must compare each letter in the words with one another to determine if the order is lexicogorical or not -> O(n)
 		while (i < firstWord.length && j < secondWord.length) {
+			const compared = compareChar();
 			if (compareChar(firstWord[i], secondWord[j] > 0)) {
 				return 1;
 			} else {
 				return -1;
 			}
+			i += 1;
+			j += 1;
 		}
 	};
 };
