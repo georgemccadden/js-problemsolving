@@ -29,6 +29,7 @@
 const isAlienSorted = (words, order) => {
 	const hashMap = new Map();
 
+	// Creating key/value pairs of the order to create a hierarchy
 	for (let i = 0; i < order.length; i++) {
 		hashMap.set(order[i], i);
 	}
