@@ -26,34 +26,30 @@
 
 // ** OPTIMAL SOLUTION :
 
-const isAlienSorted = (words, order) => {
-	const hashMap = new Map();
-
-	// Creating key/value pairs of the order to create a hierarchy -> O(26) or O(1)
-	for (let i = 0; i < order.length; i++) {
-		hashMap.set(order[i], i);
-	}
-
-	// Creating a method that compares each letter of the words
-	const compareChars = (a, b) => {
-		hashMap.get(a) - hashMap.get(b);
-	};
-
-	// Creating a method that compares the words in the first parameters
-	const compareWords = (firstWord, secondWord) => {
+var isAlienSorted = function(words, order) {
+	const compareWord1AndWord2 = (firstWord, secondWord) => {
 		let i = 0;
-		let j = 0;
-
-		// I must compare each letter in the words with one another to determine if the order is lexicogorical or not -> O(n)
-		while (i < firstWord.length && j < secondWord.length) {
-			const compared = compareChar();
-			if (compareChar(firstWord[i], secondWord[j] > 0)) {
-				return 1;
-			} else {
-				return -1;
+		while (firstWord[i] || secondWord[i]) {
+			if (!firstWord[i]) {
+				return true;
 			}
-			i += 1;
-			j += 1;
+			if (!secondWord[i]) {
+				return false;
+			}
+			if (order.indexOf(firstWord[i]) === order.indexOf(secondWord[i])) {
+				i++;
+				continue;
+			} else {
+				return order.indexOf(firstWord[i]) < order.indexOf(secondWord[i]);
+			}
 		}
+		return true;
 	};
+
+	for (let index = 0; index < words.length; index++) {
+		if (!compareWord1AndWord2(words[index - 1] || '', words[index])) {
+			return false;
+		}
+	}
+	return true;
 };
