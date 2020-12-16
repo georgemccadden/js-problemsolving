@@ -40,6 +40,12 @@ const isAlienSorted = (words, order) => {
 		let j = 0;
 
 		// I must compare each letter in the words with one another to determine if the order is lexicogorical or not -> O(n)
-		while (i < firstWord.length && j < secondWord.length) {}
+		while (i < firstWord.length && j < secondWord.length) {
+			if (compareChar(firstWord[i], secondWord[j] > 0)) {
+				return 1;
+			} else {
+				return -1;
+			}
+		}
 	};
 };
