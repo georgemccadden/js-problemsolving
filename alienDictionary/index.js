@@ -20,7 +20,7 @@
 
 // ** BRUTE FORCE ALGORITHM :
 
-// - Create a hashtable of the words and assign its value the position it is in the order parameter
+// - Create a hashmap of the words and assign its value the position it is in the order parameter
 // - Compare each letter of each of the words and if any of the letters of the following words are less than that of the first then you will know if it is in lexicographical order
 // - Return false if it is not in order, return true if you have reached the end of the length of the words
 
@@ -29,8 +29,17 @@
 const isAlienSorted = (words, order) => {
 	const hashMap = new Map();
 
-	// Creating key/value pairs of the order to create a hierarchy
+	// Creating key/value pairs of the order to create a hierarchy -> O(26) or O(1)
 	for (let i = 0; i < order.length; i++) {
 		hashMap.set(order[i], i);
 	}
+
+	// Creating a method that compares the words in the first parameters
+	const compareWords = (firstWord, secondWord) => {
+		let i = 0;
+		let j = 0;
+
+		// I must compare each letter in the words with one another to determine if the order is lexicogorical or not -> O(n)
+		while (i < firstWord.length && j < secondWord.length) {}
+	};
 };
