@@ -23,3 +23,13 @@
 // - Create a hashtable of the words and assign its value the position it is in the order parameter
 // - Compare each letter of each of the words and if any of the letters of the following words are less than that of the first then you will know if it is in lexicographical order
 // - Return false if it is not in order, return true if you have reached the end of the length of the words
+
+// ** OPTIMAL SOLUTION :
+
+const isAlienSorted = (words, order) => {
+	const hashMap = new Map();
+
+	for (let i = 0; i < order.length; i++) {
+		hashMap.set(order[i], i);
+	}
+};
