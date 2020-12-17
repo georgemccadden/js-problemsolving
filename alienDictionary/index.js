@@ -53,3 +53,7 @@ var isAlienSorted = function(words, order) {
 	}
 	return true;
 };
+
+// ** BIG O :
+
+// Runtime complexity ->
