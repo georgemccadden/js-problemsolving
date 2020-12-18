@@ -30,7 +30,7 @@ const addBinary = (a, b) => {
 		const firstNum = i < 0 ? 0 : a[i--] - `0`;
 		const secondNum = j < 0 ? 0 : b[j--] - `0`;
 
-		sum += firstNum ^ secondNum ^ carryover;
+		sum = (firstNum ^ secondNum ^ carryover) + sum;
 		carryover = (firstNum + secondNum + carryover) >> 1; /* The >> is a bitwise operator */
 	}
 
