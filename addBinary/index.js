@@ -18,6 +18,21 @@ Input -> a = `1010`, b = `1011`
 Output -> `10101`
 
 
-BRUTE FORCE SOLUTION :
+OPTIMAL SOLUTION :
 */
-const addBinary = (a, b) => (parseInt(a, 2) + parseInt(b, 2)).toString(2);
+const addBinary = (a, b) => {
+	let sum = ``;
+	let carryover = 0;
+	let i = a.length - 1; /* We want the right most element in both strings `a` and `b` */
+	let j = b.length - 1;
+
+	while (i >= 0 || j >= 0 || carryover > 0) {
+		const firstNum = i < 0 ? 0 : a[i--] - `0`;
+		const secondNum = j < 0 ? 0 : b[j--] - `0`;
+
+		sum += firstNum ^ secondNum ^ carryover;
+		carryover = (firstNum + secondNum + carryover) >> 1; /* The >> is a bitwise operator */
+	}
+
+	return sum;
+};
