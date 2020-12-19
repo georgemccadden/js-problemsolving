@@ -42,6 +42,14 @@ BRUTE FORCE APPROACH :
 - Look up coordinates
 - Return the island count
 
+OPTIMAL SOLUTION :
+
 @param {character[][]} grid
 @return {number}
 */
+
+const numIslands = (grid) => {
+	let howManyIslands = 0;
+
+	return howManyIslands;
+};
