@@ -49,11 +49,20 @@ OPTIMAL SOLUTION :
 */
 
 const numIslands = (grid) => {
+	if (!grid || grid.length === 0) {
+		return 0;
+	}
+
+	const gridLength = grid.length;
+	const rowLength = grid[0].length;
+
 	let howManyIslands = 0;
 
-	for (let rowIndex in grid) {
-		for (let colIndex in grid[rowIndex]) {
-			/* I am about to use my recursion brain */
+	for (let i = 0; i < gridLength; i++) {
+		for (let j = 0; j < rowLength; j++) {
+			if (grid[i][j] === `L`) {
+				/* This is where I will perform a breadth first traversal */
+			}
 		}
 	}
 
