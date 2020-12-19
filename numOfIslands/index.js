@@ -61,10 +61,22 @@ const numIslands = (grid) => {
 	for (let i = 0; i < gridLength; i++) {
 		for (let j = 0; j < rowLength; j++) {
 			if (grid[i][j] === `L`) {
-				/* This is where I will perform a breadth first traversal */
+				howManyIslands++;
+				makeIntoWater(grid, i, j);
 			}
 		}
 	}
 
 	return howManyIslands;
+};
+
+const makeIntoWater = (grid, rowIndex, colIndex) => {
+	if (grid[rowIndex] === undefined || grid[rowIndex][colIndex] === undefined || grid[rowIndex][colIndex] === `~`)
+		return;
+
+	grid[rowIndex][colIndex] = `~`;
+	makeIntoWater(grid, rowIndex + 1, colIndex);
+	makeIntoWater(grid, rowIndex - 1, colIndex);
+	makeIntoWater(grid, rowIndex, colIndex + 1);
+	makeIntoWater(grid, rowIndex, colIndex - 1);
 };
