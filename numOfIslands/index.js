@@ -53,7 +53,7 @@ const numIslands = (grid) => {
 
 	for (let rowIndex in grid) {
 		for (let colIndex in grid[rowIndex]) {
-			/* Check something and do something */
+			/* I am about to use my recursion brain */
 		}
 	}
 
