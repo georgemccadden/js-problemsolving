@@ -51,5 +51,11 @@ OPTIMAL SOLUTION :
 const numIslands = (grid) => {
 	let howManyIslands = 0;
 
+	for (let rowIndex in grid) {
+		for (let colIndex in grid[rowIndex]) {
+			/* Check something and do something */
+		}
+	}
+
 	return howManyIslands;
 };
