@@ -28,7 +28,14 @@ hashMap {
 }
 
 
-ALGORITHM :
+BRUTE FORCE ALGORITHM :
 
+- Create a hashmap class
+- (For `put`) Add a method to the class which accepts two parameters, key and value
+- Check whether or not the key is present, if not then create it. If so, update the value to be what you pass into the parameters
+- (For `get`) Add a method to the class which accepts one parameter, key
+- Check whether or not the key is present, if not then return -1. If so, return the value of that key to the console
+- (For `remove`) Add a method to the class which accepts one parameter, key
+- Check whether or not the key is present, if not then return -1. If so, change the value of the key to -1
 
 */
