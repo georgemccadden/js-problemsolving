@@ -53,3 +53,12 @@ const palindromicSubstring = (str) => {
 	}
 	return count;
 };
+
+/* 
+
+BIG O :
+
+Runtime complexity -> O(n) ~~ 2n - 1 because two characters need to be checked for every character of the passed in string
+Space complexity -> O(1) ~~ 4 items to keep track of
+
+*/
