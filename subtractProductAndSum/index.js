@@ -23,4 +23,12 @@ Output -> 21
 Explanation -> The product of the digits = 4 * 4 * 2 * 1 = 32, the sum of the digits = 4 + 4 + 2 + 1 = 11, the difference of 32 - 11 = 21.
 
 
+BRUTE FORCE ALGORITHM :
+
+- Convert the passed in integer into a string
+- Split the string into individual elements
+- Convert the string elements back to integers
+- Create variables to hold the product and sum of the elements
+- Return the difference of product and sum
+
 */
