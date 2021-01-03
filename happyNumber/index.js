@@ -9,4 +9,14 @@ Write an algorithm to determine if a number is happy. A happy number is a number
 - Those numbers for which this process ends in 1 are happy.
 
 
+EXAMPLE 1 :
+
+Input -> n = 19
+Output -> true
+Explanation ->
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
+
 */
