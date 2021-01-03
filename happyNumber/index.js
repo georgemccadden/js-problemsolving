@@ -36,4 +36,28 @@ Explanation ->
 8^2 + 1^2 = 65
 6^2 + 5^2 = 61... the call stack will become too long.
 
-*/
+
+SOLUTION :
+
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+
+const isHappy = (n) => {
+	let seen = new Set();
+
+	while (!seen.has(n)) {
+		seen.add(n);
+		sqSum = 0;
+
+		while (n > 0) {
+			sqSum += (n % 10) * (n % 10);
+			n = Math.floor(n / 10);
+		}
+		if (sqSum == 1) {
+			return true;
+		}
+		n = sqSum;
+	}
+};
