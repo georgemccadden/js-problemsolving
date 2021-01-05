@@ -72,7 +72,7 @@ As a software designer it's important that I document my process for solving the
 * Rule 1 -> Always state the worst case 
 * Rule 2 -> Remove constraints
 * Rule 3 -> Different inputs have different variables, such as `O(n + m)` but if two collections are nested then it's `O(n * m)`
-          * `+` for steps in order
-          * `*` for nested steps
+    * `+` for steps in order
+    * `*` for nested steps
 * Rule 4 -> Drop non-dominant terms
 
