@@ -17,3 +17,25 @@ This repository will house complex problems in the programming language of JavaS
 `O(2^n)` __Exponential Time__ -> Most likely recursive algorithms which solve a problem size `n`.
 
 `O(n!)` __Factorial Time__ -> A loop is being added for each element.
+
+
+#### Remember that iterating through half of a collections still has an O(n) runtime!
+#### Two separate collection iterations is -> O(n + m)!
+
+
+## What Determines Runtime in a Function :
+
+`Operations` (+, -, *, /)
+`Comparisons` (<, >, ==)
+`Looping` (for, while)
+`Outside Function Calls` (function())
+
+
+## Big O Rules to Code By :
+
+Rule 1 -> Always state the worst case
+Rule 2 -> Remove constraints
+Rule 3 -> Different inputs have different variables, such as `O(n + m)` but if two collections are nested then it's `O(n * m)`
+          - for steps in order
+          - for nested steps
+Rule 4 -> Drop non-dominant terms
