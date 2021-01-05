@@ -31,6 +31,15 @@ This repository will house complex problems in the programming language of JavaS
 * `Outside Function Calls` (function())
 
 
+## What Determines Space in a Function :
+
+* `Variables`
+* `Data Structures`
+* `Function calls`
+* `Allocations`
+
+
+
 ## Big O Rules to Code By :
 
 * Rule 1 -> Always state the worst case 
