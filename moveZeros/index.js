@@ -6,6 +6,7 @@ Given an array of numbers, write a function to move all 0's to the end of it whi
 
 (Arrays are best for accessing elements by index in O(1) and pushing things at the end in O(1) but for searching, deleting, and inserting it is O(n))
 
+
 EXAMPLE :
 
 Input -> [0,1,0,3,12]
