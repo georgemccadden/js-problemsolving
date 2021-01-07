@@ -4,6 +4,7 @@ PROBLEM DOMAIN :
 
 Given an array of numbers, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
+(Arrays are best for accessing elements by index in O(1) and pushing things at the end in O(1) but for searching, deleting, and inserting it is O(n))
 
 EXAMPLE :
 
