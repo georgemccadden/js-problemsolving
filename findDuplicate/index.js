@@ -36,7 +36,7 @@ SOLUTION W/ ALGORITHM :
  * @return {number}
  */
 function findDuplicate(nums) {
-	/* Keep a tally of the variables as you iterate with O(n) space */
+	/* Keep a track of the variables as you iterate with O(n) space -> hash tables are best for lookups, insertion, and deletion */
 	const allNums = {};
 
 	/* Loop through the nums array in O(n) time */
