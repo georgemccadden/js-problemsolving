@@ -32,9 +32,9 @@ ALGORITHM :
 
 
 SOLUTIONS :
-
-(Iterative)
 */
+
+/* (Iterative) */
 
 const reverseLinkedListIteratively = (head) => {
 	let curr = head;
@@ -50,6 +50,32 @@ const reverseLinkedListIteratively = (head) => {
 	return prev;
 };
 
+/* (Recursive) */
+
+const reverseLinkedListRecursively = (head) => {
+	if (!head || !head.next) {
+		return head;
+	}
+
+	const next = head.next;
+	const newHead = reverseLinkedListRecursively(next);
+
+	head.next = null;
+	next.next = head;
+	return newHead;
+};
+
 /*
+
+BIG O :
+
+(Iterative)
+
+Runtime Complexity -> O(n)
+Space Complexity -> O(1)
+
 (Recursive)
+Runtime Complexity -> O(n)
+Space Complexity -> O(n)
+
 */
