@@ -22,6 +22,14 @@ ALGORITHM :
 - Update the current node's value to the next node in the linked list which was saved.
 - Return the linked list at the end of the iteration.
 
+(Recursive)
+- Handle the case of their not being a head or a head.next value.
+- Store the linked list's head node's next value.
+- Store the recursive function in a variable with the next variable as a parameter.
+- Update the current node's next value to null.
+- Update the head to be the next.next.
+- Call your recursive function.
+
 
 SOLUTIONS :
 
