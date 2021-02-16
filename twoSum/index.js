@@ -36,15 +36,14 @@ const twoSum = (nums, target) => {
 	const map = {};
 
 	for (let i = 0; i < nums.length; i++) {
-		const neededVal = target - nums[i];
+		const needThisVal = target - nums[i];
 
-		if (neededVal in map) {
-			return [ map[neededVal], i ];
+		if (needThisVal in map) {
+			return [ map[needThisVal], i ];
+		} else {
+			map[needThisVal] = i;
 		}
-
-		map[nums[i]] = i;
 	}
-
 	return null;
 };
 
