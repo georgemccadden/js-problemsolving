@@ -16,4 +16,8 @@ TEST CASES :
 - Subtract the indexes to find the width, 4 - 0 = 4.
 - The area is 7 * 4 = 28. 
 
+[ ]
+ ^
+- Since the array's length is less than 2, the function should return 0.
+
 */
