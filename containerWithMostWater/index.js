@@ -9,5 +9,11 @@ CONSTRAINTS :
 - Do the left and right sides of the graph count as walls? -> No, the sides cannot be used to form a container.
 - Does a higher line inside of our container affect the area? -> No, lines inside a container does not affect the area.
 
+TEST CASES :
+[7, 1, 2, 3, 9]
+ ^    and    ^
+- Since these are the two largest lines in our graph, they would hold the greatest area (a = l * w). 7 is the height given that it's the greatest common number of the walls. 
+- Subtract the indexes to find the width, 4 - 0 = 4.
+- The area is 7 * 4 = 28. 
 
 */
