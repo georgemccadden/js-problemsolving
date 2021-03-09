@@ -20,4 +20,10 @@ TEST CASES :
  ^
 - Since the array's length is less than 2, the function should return 0.
 
+[6, 9, 3, 4, 5, 8]
+    ^           ^
+- Although these index values aren't the most obvious choices, they hold the greatest area.
+- Subtracting the indexes to find the width, 5 - 1 = 4.
+- The area is 8 * 4 = 32.
+
 */
