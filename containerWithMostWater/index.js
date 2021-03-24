@@ -25,4 +25,17 @@ TEST CASES :
 - Subtracting the indexes to find the width, 5 - 1 = 4.
 - The area is 8 * 4 = 32.
 
+BRUTE FORCE SOLUTION :
 */
+const bruteForce = (arr) => {
+	let maxArea = 0;
+	for (let p1 = 0; p1 < arr.length; p1++) {
+		for (let p2 = p1 + 1; p2 < arr.length; p2++) {
+			const min = Math.min(arr[p2], arr[p1]);
+			const width = p2 - p1;
+			const area = min * width;
+			maxArea = Math.max(area, maxArea);
+		}
+	}
+	return maxArea;
+};
