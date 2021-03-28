@@ -39,3 +39,31 @@ const bruteForce = (arr) => {
 	}
 	return maxArea;
 };
+
+/*
+COMPLEXITY ANALYSIS :
+Time complexity -> Quadratic runtime of O(n^2) because of the nested for loop.
+Space complextiy -> Constant space of O(1) because none of the variables use more memory than initialized.
+
+OPTIMIZATION EXPLANATION :
+In order to improve the runtime I iterated over the array only once while keeping one pointer still. The pointer I decided not to move is the farthest value in the array given that it would not change the minimum variable in the equation for finding the area. If area = min(a, b) * (b[i] - a[i]) then the width portion of the equation is the most critical.
+
+OPTIMAL SOLUTION :
+*/
+const containerWithMostWater = (arr) => {
+	let maxArea = 0;
+	let p2 = arr.length - 1;
+	for (let p1 = 0; p1 < arr.length; p1++) {
+		const min = Math.min(p2, p1);
+		const width = p2 - p1;
+		const area = min * width;
+		maxArea = Math.min(maxArea, area);
+	}
+	return maxArea;
+};
+/*
+COMPLEXITY ANALYSIS :
+Time complexity -> Linear runtime of O(n) because I must visit every element in the array.
+Space complexity -> Constant space of O(1) because none of the variables use more memory than initialized.
+  
+*/
