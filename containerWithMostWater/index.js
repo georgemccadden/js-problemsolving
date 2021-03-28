@@ -57,7 +57,7 @@ const containerWithMostWater = (arr) => {
 		const min = Math.min(arr[p2], arr[p1]);
 		const width = p2 - p1;
 		const area = min * width;
-		maxArea = Math.min(maxArea, area);
+		maxArea = Math.max(maxArea, area);
 	}
 	return maxArea;
 };
