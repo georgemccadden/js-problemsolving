@@ -46,18 +46,24 @@ Time complexity -> Quadratic runtime of O(n^2) because of the nested for loop.
 Space complextiy -> Constant space of O(1) because none of the variables use more memory than initialized.
 
 OPTIMIZATION EXPLANATION :
-In order to improve the runtime I iterated over the array only once while keeping one pointer still. The pointer I decided not to move is the farthest value in the array given that it would not change the minimum variable in the equation for finding the area. If area = min(a, b) * (b[i] - a[i]) then the width portion of the equation is the most critical.
+In order to improve the runtime I iterated over the array only once while using two pointers. Using the equation for finding the area, area = min(a, b) * (b[i] - a[i]) will allow for the use of the greatest minimum height and working our way inwards to find other alternative heights.
 
 OPTIMAL SOLUTION :
 */
 const containerWithMostWater = (arr) => {
 	let maxArea = 0;
+	let p1 = 0;
 	let p2 = arr.length - 1;
-	for (let p1 = 0; p1 < arr.length; p1++) {
-		const min = Math.min(arr[p2], arr[p1]);
+	while (p1 < p2) {
+		const height = Math.min(arr[p1], arr[p2]);
 		const width = p2 - p1;
-		const area = min * width;
-		maxArea = Math.max(maxArea, area);
+		const area = height * width;
+		maxArea = Math.max(area, maxArea);
+		if (p1 <= p2) {
+			p1++;
+		} else {
+			p2++;
+		}
 	}
 	return maxArea;
 };
