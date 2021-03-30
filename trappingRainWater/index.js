@@ -28,4 +28,27 @@ TEST CASES :
     ^
 - This collection would return 0 because it doesn't have other values which would properly represent trapped rain water.
 
+BRUTE FORCE SOLUTION :
 */
+const bruteForce = (heights) => {
+	let totalRainWater = 0;
+	for (let pointer = 0; pointer < heights.length; pointer++) {
+		let leftPointer = pointer;
+		let rightPointer = pointer;
+		let maxLeft = 0;
+		let maxRight = 0;
+		while (leftPointer >= 0) {
+			maxLeft = Math.max(maxLeft, heights[leftPointer]);
+			leftPointer--;
+		}
+		while (rightPointer < heights.length) {
+			maxRight = Math.max(maxRight, heights[rightPointer]);
+			rightPointer++;
+		}
+		const currRainWater = Math.min(maxLeft, maxRight) - heights[pointer];
+		if (currRainWater >= 0) {
+			totalRainWater += currRainWater;
+		}
+	}
+	return totalRainWater;
+};
