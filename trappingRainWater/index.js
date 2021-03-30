@@ -52,3 +52,9 @@ const bruteForce = (heights) => {
 	}
 	return totalRainWater;
 };
+
+/*
+COMPLEXITY ANALYSIS :
+Time Complexity -> Quadratic runtime of O(n^2) because of the nested while loops inside of the for loop.
+Space Complexity -> Constant space of O(1) because none of the variables scale.
+*/
