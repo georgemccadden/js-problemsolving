@@ -53,3 +53,17 @@ const newsFeed = [
 		status: database[2].status
 	}
 ];
+
+let usernamePrompt = prompt('Username :');
+let passwordPrompt = prompt('Password :');
+
+const userVerification = (user, pass) => {
+	for (users of database) {
+		if (user === username && pass === password) {
+			console.log('Successful login!');
+			return newsFeed;
+		} else {
+			console.log('Incorrect username and/or password!');
+		}
+	}
+};
