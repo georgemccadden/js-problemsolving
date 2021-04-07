@@ -58,12 +58,17 @@ let usernamePrompt = prompt('Username :');
 let passwordPrompt = prompt('Password :');
 
 const userVerification = (user, pass) => {
-	for (users of database) {
-		if (user === username && pass === password) {
-			console.log('Successful login!');
-			return newsFeed;
-		} else {
-			console.log('Incorrect username and/or password!');
+	if (!user || !pass) {
+		console.log('Please enter a valid username and/or password!');
+	} else {
+		for (let i = 0; i < database.length; i++) {
+			if (user === database[i].username && pass === database[i].password) {
+				console.log(`Welcome back ${database[i].firstName}! Take a look at your timeline :`);
+				return newsFeed;
+			}
 		}
+		console.log('Incorrect username and/or password!');
 	}
 };
+
+userVerification(usernamePrompt, passwordPrompt);
