@@ -1,4 +1,3 @@
-'use strict';
 /*
 
 PROBLEM DOMAIN :
@@ -37,5 +36,20 @@ const database = [
 		firstName: 'Canden',
 		lastName: 'Poindexter',
 		status: 'I miss picking George up over my head and pretending to throw him down the hallway.. hehe good times!'
+	}
+];
+
+const newsFeed = [
+	{
+		user: database[0].firstName,
+		status: database[0].status
+	},
+	{
+		user: database[1].firstName,
+		status: database[1].status
+	},
+	{
+		user: database[2].firstName,
+		status: database[2].status
 	}
 ];
