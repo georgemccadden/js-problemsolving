@@ -57,4 +57,39 @@ const bruteForce = (heights) => {
 COMPLEXITY ANALYSIS :
 Time Complexity -> Quadratic runtime of O(n^2) because of the nested while loops inside of the for loop.
 Space Complexity -> Constant space of O(1) because none of the variables scale.
+
+OPTIMAL SOLUTION :
+*/
+const trappingRainwater = (heights) => {
+	let left = 0;
+	let right = heights.length - 1;
+	let maxLeft = 0;
+	let maxRight = 0;
+	let total = 0;
+	while (left < right) {
+		if (heights[left] <= heights[right]) {
+			if (heights[left] >= maxLeft) {
+				maxLeft = heights[left];
+			} else {
+				total += maxLeft - heights[left];
+			}
+			left++;
+		} else {
+			if (heights[right] >= maxRight) {
+				maxRight = heights[right];
+			} else {
+				total += maxRight - heights[right];
+			}
+			right--;
+		}
+	}
+	return total;
+};
+
+/*
+
+COMPLEXITY ANALYSIS :
+Time Complexity -> Linear runtime of O(n) because I only iterate through the heights array once.
+Space Complexity -> Constant time of O(1) because none of the variables used will scale although they change.
+
 */
