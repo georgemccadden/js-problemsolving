@@ -57,18 +57,22 @@ const newsFeed = [
 let usernamePrompt = prompt('Username :');
 let passwordPrompt = prompt('Password :');
 
-const userVerification = (user, pass) => {
-	if (!user || !pass) {
-		console.log('Please enter a valid username and/or password!');
-	} else {
-		for (let i = 0; i < database.length; i++) {
-			if (user === database[i].username && pass === database[i].password) {
-				console.log(`Welcome back ${database[i].firstName}! Take a look at your timeline :`);
-				return newsFeed;
-			}
+const isUserValid = (username, password) => {
+	for (let i = 0; i < database.length; i++) {
+		if (username === database[i].username && password === database[i].password) {
+			return true;
 		}
-		console.log('Incorrect username and/or password!');
+	}
+	return false;
+};
+
+const signingIn = (username, password) => {
+	if (isUserValid(username, password)) {
+		alert(`Welcome back ${username}! Take a look at your timeline :`);
+		return newsFeed;
+	} else {
+		alert('Your username and/or password is incorrect..');
 	}
 };
 
-userVerification(usernamePrompt, passwordPrompt);
+signingIn(usernamePrompt, passwordPrompt);
