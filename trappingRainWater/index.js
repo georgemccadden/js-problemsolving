@@ -90,6 +90,6 @@ const trappingRainwater = (heights) => {
 
 COMPLEXITY ANALYSIS :
 Time Complexity -> Linear runtime of O(n) because I only iterate through the heights array once.
-Space Complexity -> Constant time of O(1) because none of the variables used will scale although they change.
+Space Complexity -> Constant time of O(1) because none of the variables used will scale although they changed.
 
 */
