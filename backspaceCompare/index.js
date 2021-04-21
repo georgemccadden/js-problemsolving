@@ -5,7 +5,6 @@ Given two strings "s" and "t", return true if they are equal when both are typed
 
 
 TEST CASES :
-
 Input -> s = "ab#c", t = "ad#c"
 Output -> true
 Explanation -> Both s and t become "ac".
@@ -14,9 +13,15 @@ Input -> s = "ab##", t = "c#d#"
 Output -> true
 Explanation -> Both s and t become "".
 
+Input -> s = "a#c", t = "b"
+Output -> false
+Explanation -> s becomes "c" while t becomes "b".
 
 Input -> s = "a#c", t = "b"
 Output -> false
 Explanation -> s becomes "c" while t becomes "b".
 
+
+BRUTE FORCE SOLUTION :
 */
+const bruteForce = arr;
