@@ -24,4 +24,29 @@ Explanation -> s becomes "c" while t becomes "b".
 
 BRUTE FORCE SOLUTION :
 */
-const bruteForce = arr;
+const buildString = (string) => {
+	let finalString = [];
+	for (let p = 0; p < string.length; p++) {
+		if (string[p] !== '#') {
+			finalString.push(string[p]);
+		} else {
+			finalString.pop();
+		}
+	}
+	return finalString;
+};
+
+const bruteForce = (firstString, secondString) => {
+	let finalFirst = bruteForce(firstString);
+	let finalSecond = bruteForce(secondString);
+	if (finalFirst.length !== finalSecond.length) {
+		return false;
+	} else {
+		for (let p = 0; p < finalSecond.length; p++) {
+			if (finalFirst[p] !== finalSecond[p]) {
+				return false;
+			}
+		}
+	}
+	return true;
+};
