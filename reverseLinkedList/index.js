@@ -28,7 +28,7 @@ BRUTE FORCE ALGORITHM :
 	- Update current node to next variable
 - When current node is null return the previous node variable for the reversed linked list
 
-CODE :
+BRUTE FORCE SOLUTION :
 */
 const reverseLinkedList = (head) => {
 	let prev = null;
