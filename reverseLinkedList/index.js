@@ -1,6 +1,6 @@
 /*
 PROBLEM DOMAIN :
-Return a linked list in reverse.
+Given a linked list, return it in reverse.
 
 
 */
