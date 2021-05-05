@@ -41,3 +41,8 @@ const reverseLinkedList = (head) => {
 	}
 	return prev;
 };
+/*
+COMPLEXITY ANALYSIS :
+Runtime complexity -> O(n) because we must traverse the entire linked list until we reach null
+Space complexity -> O(1) because we are only keeping a reference to one node
+*/
