@@ -18,16 +18,15 @@ null
 
 
 BRUTE FORCE ALGORITHM :
-- Start from the root node
-- Create a current node variable for iteration
-- Create a previous node variable to keep track of the reversal
-- Create a next node variable to indicate where we are in the traversal
-- While the current node is not null,
-	- Update the next node variable to current node's next
-	- Set previous node variable to current node
-	- Set the current node (head) variable's next to null
-	- Update previous node variable as current node's next
-- When current node is null, return the previous node variable for the reversed linked list
+- Create a function to with a linked list's head node as the parameter
+- Set a previous node variable to null
+- Set a current node variable as the passed in head node
+- While the current node is not null
+	- Set a next node variable to current node's next
+	- Update current node's next to previous
+	- Update previous node variable to current node
+	- Update current node to next variable
+- When current node is null return the previous node variable for the reversed linked list
 
 CODE :
 */
