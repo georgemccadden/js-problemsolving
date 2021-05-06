@@ -31,8 +31,17 @@ BRUTE FORCE ALGORITHM :
 - Create variables to hold the product and sum of the elements
 - Return the difference of product and sum
 
- const bruteForce = (n) => {
-    
- }
-
+CODE :
 */
+const productAndSum = (num) => {
+	let product = 1;
+	let sum = 0;
+	let newNum = num + '';
+	newNum = [ ...(newNum + '') ].map(Number);
+
+	for (let p = 0; p < newNum.length; p++) {
+		product *= newNum[p];
+		sum += newNum[p];
+	}
+	return product - sum;
+};
