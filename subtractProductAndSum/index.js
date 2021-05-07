@@ -45,3 +45,9 @@ const productAndSum = (num) => {
 	}
 	return product - sum;
 };
+
+/*
+COMPLEXTIY ANALSYIS :
+Runtime complexity -> O(2n) ~ O(n)
+Space complexity -> 
+*/
