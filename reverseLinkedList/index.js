@@ -18,7 +18,7 @@ null
 
 
 BRUTE FORCE ALGORITHM :
-- Create a function to with a linked list's head node as the parameter
+- Create a function with a linked list's head node as the parameter
 - Set a previous node variable to null
 - Set a current node variable as the passed in head node
 - While the current node is not null
